@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Cybersecurity Portfolio of Godswill Tawia-Mante - IT Auditor, ISO 27001 Lead Implementer, & Systems Administrator based in Accra, Ghana. Explore enterprise security projects, audits, and technical documentation.">
+    <meta name="author" content="Godswill Tawia-Mante">
+    <meta name="keywords" content="Cybersecurity, IT Auditor, ISO 27001 Lead Implementer, Systems Administrator, Threat Monitoring, Web Application Security, Active Directory Security, Ghana Tech">
+    <title>Godswill Tawia-Mante | Enterprise Security Architecture & Governance Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Inline SVG definitions or remote assets if necessary can be linked here, but using self-contained inline elements or CSS vectors is better -->
+</head>
+<body class="dark-theme">
+
+    <!-- CUSTOM CYBER CURSOR SYSTEM -->
+    <div class="custom-cursor-outer" id="cursor-outer"></div>
+    <div class="custom-cursor-inner" id="cursor-inner"></div>
+
+    <!-- TERMINAL BOOT INITIALIZATION SCREEN -->
+    <div id="boot-screen" class="boot-screen">
+        <div class="boot-terminal">
+            <div class="boot-header">
+                <span class="boot-dot red"></span>
+                <span class="boot-dot yellow"></span>
+                <span class="boot-dot green"></span>
+                <span class="boot-title">sys_init.sh</span>
+            </div>
+            <div class="boot-content" id="boot-content">
+                <!-- Lines will be progressively injected via script.js for proper terminal typing sequence -->
+            </div>
+            <div class="boot-typing-svg-container">
+                <img src="https://readme-typing-svg.herokuapp.com?color=00FF00&lines=Cybersecurity+Analyst;SOC+Operations;IT+Audit+%26+Compliance;Web+Application+Security;ISO+27001+Lead+Implementer;Active+Directory+Security" alt="Cybersecurity Roles Terminal Matrix">
+            </div>
+        </div>
+    </div>
+
+    <!-- MATRIX MATRIX BACKGROUND LAYER -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- HEADER & NAVIGATION -->
+    <header id="navbar" class="main-header">
+        <div class="nav-container">
+            <a href="#root" class="nav-logo" aria-label="Return to Root Node">
+                <div class="avatar-mini-logo">
+                    <!-- SVG Cyber Avatar Minimal Emblem -->
+                    <svg viewBox="0 0 100 100" width="36" height="36" class="cyber-avatar-svg">
+                        <polygon points="50,15 80,30 80,70 50,85 20,70 20,30" fill="none" stroke="currentColor" stroke-width="4"/>
+                        <polyline points="30,45 45,60 70,35" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="50" cy="50" r="3" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="text-primary">G.TAWIA-MANTE</span>
+                    <span class="text-sub">root@sec-ops:~#</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#root" class="nav-link active-link"><span class="nav-idx">0x00</span> root</a></li>
+                    <li><a href="#whoami" class="nav-link"><span class="nav-idx">0x01</span> whoami</a></li>
+                    <li><a href="#skills" class="nav-link"><span class="nav-idx">0x02</span> skills</a></li>
+                    <li><a href="#projects" class="nav-link"><span class="nav-idx">0x03</span> projects</a></li>
+                    <li><a href="#writeups" class="nav-link"><span class="nav-idx">0x04</span> writeups</a></li>
+                    <li><a href="#connect" class="nav-link"><span class="nav-idx">0x05</span> connect</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Security Matrix Spectrum">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+                        <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/>
+                        <line x1="1.76" y1="19.78" x2="3.18" y2="18.36" stroke="currentColor" stroke-width="2"/>
+                        <line x1="19.78" y1="3.18" x2="18.36" y2="4.22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="hamburger-menu" id="hamburger" aria-label="Toggle Mobile Matrix Interceptor Layout">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN SCROLLABLE CONTENT LAYOUT -->
+    <main class="main-wrapper">
+
+        <!-- SECTION 0x00: HERO ( > root ) -->
+        <!-- UPDATE THIS SECTION -->
+        <section id="root" class="hero-section target-section">
+            <div class="section-container hero-grid">
+                <div class="hero-avatar-wrapper">
+                    <div class="cyber-shield-scanner">
+                        <div class="laser-line"></div>
+                        <!-- Embedded complex visual svg acting as avatar image representation -->
+                        <svg class="avatar-hero-svg" viewBox="0 0 200 200" width="100%" height="100%">
+                            <defs>
+                                <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="var(--accent-glow)" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+                                </radialGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="url(#glowGrad)" stroke="var(--accent-color)" stroke-width="2" stroke-dasharray="8 6"/>
+                            <circle cx="100" cy="100" r="75" fill="none" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="2 4"/>
+                            <!-- Cybernetic head outline -->
+                            <path d="M60,110 C60,60 140,60 140,110 C140,135 130,150 100,165 C70,150 60,135 60,110 Z" fill="var(--bg-card)" stroke="var(--accent-color)" stroke-width="3"/>
+                            <!-- Tech interface elements overlays -->
+                            <line x1="30" y1="100" x2="170" y2="100" stroke="var(--accent-dim)" stroke-width="1"/>
+                            <line x1="100" y1="30" x2="100" y2="170" stroke="var(--accent-dim)" stroke-width="1"/>
+                            <!-- HUD Crosshairs -->
+                            <path d="M90,75 L110,75 M100,65 L100,85" stroke="var(--accent-color)" stroke-width="1.5"/>
+                            <rect x="75" y="95" width="50" height="25" rx="4" fill="none" stroke="var(--accent-color)" stroke-width="2"/>
+                            <!-- Digital metrics readout indicators -->
+                            <text x="100" y="112" font-family="monospace" font-size="10" fill="var(--accent-color)" text-anchor="middle" letter-spacing="1">SEC-COMPLIANT</text>
+                        </svg>
+                        <div class="terminal-badge">SYS-ADMIN // INTERCEPTOR</div>
+                    </div>
+                </div>
+
+                <div class="hero-text-block">
+                    <div class="terminal-prefix-tag">⚡ AUTHENTICATED CONTEXT SECURE Node</div>
+                    <h1 class="glitch-text" data-text="Godswill Tawia-Mante">Godswill Tawia-Mante</h1>
+                    <h2 class="sub-headline">Cybersecurity Analyst | IT Auditor | ISO 27001 Lead Implementer</h2>
+                    <p class="professional-summary">
+                        Results-driven IT Professional and certified Information Security expert with extensive background in comprehensive security analysis, infrastructural systems administration, rigorous internal IT audits, and compliance governance. Specialized in deploying robust Information Security Management Systems (ISMS) matching ISO/IEC 27001 architectures, structuring high-integrity Active Directory deployments, and performing systematic risk assessments to lock down enterprise attack surfaces and assure business operational metrics.
+                    </p>
+                    
+                    <div class="hero-cta-group">
+                        <a href="#connect" class="btn btn-primary cyber-btn-glitch">
+                            <span class="btn-inner">Contact Me <span class="arrow">_</span></span>
+                        </a>
+                        <a href="https://linkedin.com/in/godswillmante1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/3xpl0r3r" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#connect" class="btn btn-outline" id="resume-download-trigger">
+                            <span>Download Resume (CV)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANIMATED REALTIME INFRASTRUCTURE METRICS CARDS -->
+            <div class="section-container metrics-dashboard-row">
+                <div class="metric-card">
+                    <div class="metric-icon">🔍</div>
+                    <div class="metric-data"><span class="counter" data-target="45">0</span>+</div>
+                    <div class="metric-label">Security Audits Executed</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🏢</div>
+                    <div class="metric-data"><span class="counter" data-target="12">0</span>+</div>
+                    <div class="metric-label">Organizations Supported</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">👥</div>
+                    <div class="metric-data"><span class="counter" data-target="2500">0</span>+</div>
+                    <div class="metric-label">Active Directory Users Managed</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🛡️</div>
+                    <div class="metric-data"><span class="counter" data-target="8">0</span>/8</div>
+                    <div class="metric-label">ISO 27001 Domains Governed</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 0x01: WHOAMI ( > whoami ) -->
+        <!-- UPDATE THIS SECTION -->
+        <section id="whoami" class="whoami-section target-section">
+            <div class="section-container">
+                <div class="section-header-block">
+                    <h2 class="section-title"><span class="dir-symbol">></span> whoami</h2>
+                    <div class="section-subtitle-line">Decoupling identity telemetry and professional profile logs</div>
+                </div>
+
+                <div class="terminal-profile-grid">
+                    <div class="terminal-window-wrapper">
+                        <div class="terminal-bar">
+                            <span class="terminal-win-title">profile_telemetry.log</span>
+                            <div class="terminal-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="terminal-body-code">
+                            <p><span class="p-keyword">def</span> <span class="p-func">get_capabilities</span>():</p>
+                            <p class="p-indent"><span class="p-str">"Return technical baseline attributes and continuous execution posture"</span></p>
+                            <p class="p-indent">posture = {</p>
+                            <p class="p-indent2">"core_focus": ["Information Security Management Systems", "IT General Controls Auditing", "Infrastructure Resiliency"],</p>
+                            <p class="p-indent2">"operating_theater": "Accra, Ghana // Enterprise Matrix",</p>
+                            <p class="p-indent2">"audit_methodology": "COBIT, ISO 27001, NIST Frameworks",</p>
+                            <p class="p-indent2">"systems_scope": ["Windows Server Active Directory", "Hardened Linux Distributions", "Hybrid Networks"]</p>
+                            <p class="p-indent">}</p>
+                            <p class="p-indent"><span class="p-keyword">return</span> posture</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-narrative-card">
+                        <h3>Professional Context & Operations</h3>
+                        <p>
+                            My trajectory bridges rigorous administrative systems oversight with elite proactive cybersecurity analysis. As an IT Auditor, I specialize in identifying structural gaps in operating environments, inspecting IT General Controls (ITGC), establishing comprehensive asset classification protocols, and tracking configuration changes across multi-tiered corporate setups.
+                        </p>
+                        <p>
+                            Through the lens of governance, I hold valid expertise as an <strong>ISO 27001 Lead Implementer</strong>, which enables me to translate complex legal and organizational security constraints into running programmatic safeguards, crafting operational business continuity frameworks, and preparing modern firms to clear demanding external accreditation reviews without incident.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CHRONOLOGICAL EXPERIENCE TIMELINE -->
+                <div class="timeline-wrapper-block">
+                    <h3 class="timeline-title-accent">Deployment History & Milestones</h3>
+                    <div class="timeline-backbone"></div>
+                    
+                    <div class="timeline-nodes-container">
+                        
+                        <!-- Timeline Node 1 -->
+                        <div class="timeline-item scroll-reveal-node">
+                            <div class="timeline-marker-dot"></div>
+                            <div class="timeline-card-content">
+                                <span class="timeline-timestamp">September 2025 – Present</span>
+                                <h4 class="timeline-role">Cybersecurity Analyst / Auditor</h4>
+                                <h5 class="timeline-company">Multisec Solutions Ltd</h5>
+                                <p class="timeline-desc-text">
+                                    Lead structural external and internal security audits assessing enterprise configurations. Architect and deploy formal ISO 27001 compliant baseline guidelines, execute automated vulnerability scans across web application stacks, evaluate user segregation logic via Active Directory, and formulate extensive vulnerability mitigation playbooks for financial and technology sector clients.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Node 2 -->
+                        <div class="timeline-item scroll-reveal-node">
+                            <div class="timeline-marker-dot"></div>
+                            <div class="timeline-card-content">
+                                <span class="timeline-timestamp">March 2025 – August 2025</span>
+                                <h4 class="timeline-role">IT Officer</h4>
+                                <h5 class="timeline-company">ISON Xperiences Ghana</h5>
+                                <p class="timeline-desc-text">
+                                    Administered critical high-availability production networks and core systems engineering stacks. Conducted ongoing access governance checks, updated system hardening settings on Windows and Linux endpoints, managed disaster recovery backups, and handled root-cause analysis for security infrastructure alerts.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Node 3 -->
+                        <div class="timeline-item scroll-reveal-node">
+                            <div class="timeline-marker-dot"></div>
+                            <div class="timeline-card-content">
+                                <span class="timeline-timestamp">November 2023 – December 2024</span>
+                                <h4 class="timeline-role">Assistant IT Officer</h4>
+                                <h5 class="timeline-company">MSI Reproductive Choices Ghana</h5>
+                                <p class="timeline-desc-text">
+                                    Supported security administration and end-user access management procedures across regional clinics and corporate sites. Optimized operational software distributions, mitigated internal endpoint risk configurations, enforced perimeter defenses, and designed technical training models for staff security awareness.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Node 4 -->
+                        <div class="timeline-item scroll-reveal-node">
+                            <div class="timeline-marker-dot"></div>
+                            <div class="timeline-card-content">
+                                <span class="timeline-timestamp">July 2014 – November 2019</span>
+                                <h4 class="timeline-role">ICT Teacher / Administrative Officer</h4>
+                                <h5 class="timeline-company">Mante School of Excellence</h5>
+                                <p class="timeline-desc-text">
+                                    Managed educational local area networks, designed training curricula for basic computer literacy, and maintained school administrative systems, creating a reliable foundation for data integrity and network access controls.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 0x02: SKILLS ( > skills ) -->
+        <!-- UPDATE THIS SECTION -->
+        <section id="skills" class="skills-section target-section">
+            <div class="section-container">
+                <div class="section-header-block">
+                    <h2 class="section-title"><span class="dir-symbol">></span> skills</h2>
+                    <div class="section-subtitle-line">Core technical security matrices and architectural competencies</div>
+                </div>
+
+                <div class="skills-grid-layout">
+                    
+                    <!-- Card 1 -->
+                    <div class="skill-modern-card scroll-reveal-node">
+                        <div class="skill-icon-header">
+                            <span class="sk-icon">📋</span>
+                            <span class="sk-hex-id">0x1A</span>
+                        </div>
+                        <h3>IT Audit & Compliance</h3>
+                        <p>Evaluating IT General Controls (ITGC), segregation of duties matrices, change management pipelines, and data preservation tracking mechanisms aligned with international control standards.</p>
+                        <div class="skill-progress-bar-wrapper">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                        <span class="skill-pct-label">92% Baseline Operational Efficiency</span>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="skill-modern-card scroll-reveal-node">
+                        <div class="skill-icon-header">
+                            <span class="sk-icon">🔐</span>
+                            <span class="sk-hex-id">0x2B</span>
+                        </div>
+                        <h3>ISO 27001 Implementation</h3>
+                        <p>Developing robust Information Security Management Systems (ISMS), authoring policies, managing Statement of Applicability documentation, and enforcing operational internal risk assessments.</p>
+                        <div class="skill-progress-bar-wrapper">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                        <span class="skill-pct-label">95% Baseline Operational Efficiency</span>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="skill-modern-card scroll-reveal-node">
+                        <div class="skill-icon-header">
+                            <span class="sk-icon">🌐</span>
+                            <span class="sk-hex-id">0x3C</span>
+                        </div>
+                        <h3>Web Application Security</h3>
+                        <p>Vulnerability testing, manual logic review, testing API controls, identifying vulnerabilities within the OWASP Top 10 framework, and using intercepting proxies for code analysis.</p>
+                        <div class="skill-progress-bar-wrapper">
+                            <div class="progress-fill" style="width: 88%"></div>
+                        </div>
+                        <span class="skill-pct-label">88% Baseline Operational Efficiency</span>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="skill-modern-card scroll-reveal-node">
+                        <div class="skill-icon-header">
+                            <span class="sk-icon">🌳</span>
+                            <span class="sk-hex-id">0x4D</span>
+                        </div>
+                        <h3>Active Directory Security</h3>
+                        <p>Structuring functional trees, configuring Group Policy Objects, auditing domain trusts, detecting configuration flaws, and monitoring authentication protocol pathways.</p>
+                        <div class="skill-progress-bar-wrapper">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="skill-pct-label">90% Baseline Operational Efficiency</span>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="skill-modern-card scroll-reveal-node">
+                        <div class="skill-icon-header">
+                            <span class="sk-icon">🐧</span>
+                            <span class="sk-hex-id">0x5E</span>
+                        </div>
+                        <h3>Windows & Linux Administration</h3>
+                        <p>Deploying production environments, shell scripting for maintenance, setting file-system permission structures, monitoring performance counters, and hardening services.</p>
+                        <div class="skill-progress-bar-wrapper">
+                            <div class="progress-fill" style="width: 91%"></div>
+                        </div>
+                        <span class="skill-pct-label">91% Baseline Operational Efficiency</span>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="skill-modern-card scroll-reveal-node">
+                        <div class="skill-icon-header">
+                            <span class="sk-icon">🛡️</span>
+                            <span class="sk-hex-id">0x6F</span>
+                        </div>
+                        <h3>Risk Assessment & Security Controls</h3>
+                        <p>Mapping threat vectors, quantifying business operational impact, identifying critical business assets, and orchestrating compensatory administrative security controls.</p>
+                        <div class="skill-progress-bar-wrapper">
+                            <div class="progress-fill" style="width: 94%"></div>
+                        </div>
+                        <span class="skill-pct-label">94% Baseline Operational Efficiency</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 0x03: PROJECTS ( > projects ) -->
+        <section id="projects" class="projects-section target-section">
+            <div class="section-container">
+                <div class="section-header-block">
+                    <h2 class="section-title"><span class="dir-symbol">></span> projects</h2>
+                    <div class="section-subtitle-line">Production-grade security engineering deployments and compliance records</div>
+                </div>
+
+                <div class="projects-grid-layout">
+                    
+                    <!-- PROJECT 1 -->
+                    <!-- UPDATE THIS PROJECT -->
+                    <div class="project-card scroll-reveal-node">
+                        <div class="project-tag">AUDIT // COMPLIANCE</div>
+                        <h3>Enterprise Active Directory Security Assessment</h3>
+                        <p class="project-summary-text">
+                            Executed an extensive security review across an infrastructure domain supporting over 2,500 active objects. Identified configuration weaknesses, audited administrative accounts, and corrected structural domain vulnerabilities.
+                        </p>
+                        <div class="project-tech-tokens">
+                            <span>PowerSploit</span><span>BloodHound</span><span>GPO Audit</span><span>Kerberos Hardening</span>
+                        </div>
+                        <div class="project-achievements-block">
+                            <strong>Key Results:</strong> Re-architected organizational units, disabled obsolete NTLM authentication pathways, and implemented fine-grained password controls across tiered accounts.
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="btn btn-card-action" onclick="alert('Project Detail Log: Enterprise AD Security Assessment verified. Detailed configuration records are restricted under NDAs.')">View Details _</button>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 2 -->
+                    <!-- UPDATE THIS PROJECT -->
+                    <div class="project-card scroll-reveal-node">
+                        <div class="project-tag">GOVERNANCE // INTERNAL AUDIT</div>
+                        <h3>IT General Controls Audit Review</h3>
+                        <p class="project-summary-text">
+                            Structured a comprehensive internal review covering change management lifecycles, network operations logs, and identity provisioning pipelines to satisfy regulatory requirements.
+                        </p>
+                        <div class="project-tech-tokens">
+                            <span>COBIT Framework</span><span>ITGC Matrix</span><span>Excel Analytics</span><span>Access Control Lists</span>
+                        </div>
+                        <div class="project-achievements-block">
+                            <strong>Key Results:</strong> remediated 14 high-risk findings related to user offboarding delays and reduced administrative access violations by 40% across business segments.
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="btn btn-card-action" onclick="alert('Project Detail Log: ITGC Audit Framework active. Remediated policy structures stored on secure network nodes.')">View Details _</button>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 3 -->
+                    <!-- UPDATE THIS PROJECT -->
+                    <div class="project-card scroll-reveal-node">
+                        <div class="project-tag">STANDARDS // SECURITY FRAMEWORKS</div>
+                        <h3>ISO 27001 ISMS Deployment</h3>
+                        <p class="project-summary-text">
+                            Coordinated structural design documentation and risk tracking matrices to align an enterprise operational stack with ISO/IEC 27001 international standards.
+                        </p>
+                        <div class="project-tech-tokens">
+                            <span>ISMS Toolkits</span><span>Risk Matrix</span><span>Policy Architecture</span><span>Statement of Applicability</span>
+                        </div>
+                        <div class="project-achievements-block">
+                            <strong>Key Results:</strong> Drafted 22 core security policies, completed a business impact analysis, and guided the technology group through an external assessment without any major compliance gaps.
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="btn btn-card-action" onclick="alert('Project Detail Log: ISMS deployment mapping successful. All organizational safety indicators cleared.')">View Details _</button>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 4 -->
+                    <!-- UPDATE THIS PROJECT -->
+                    <div class="project-card scroll-reveal-node">
+                        <div class="project-tag">ASSESSMENT // PENETRATION TESTING</div>
+                        <h3>Web Application Security Testing Engagement</h3>
+                        <p class="project-summary-text">
+                            Conducted black-box and grey-box web application vulnerability assessments on production payment links and user database dashboards.
+                        </p>
+                        <div class="project-tech-tokens">
+                            <span>Burp Suite Pro</span><span>OWASP ZAP</span><span>SQLMap</span><span>API Interception</span>
+                        </div>
+                        <div class="project-achievements-block">
+                            <strong>Key Results:</strong> Identified and documented critical parameter tampering and cross-site scripting vulnerabilities, preventing potential data exposure incidents.
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="btn btn-card-action" onclick="alert('Project Detail Log: Web Sec Assessment neutralized. Exploitation vectors mitigated and re-tested.')">View Details _</button>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 5 -->
+                    <!-- UPDATE THIS PROJECT -->
+                    <div class="project-card scroll-reveal-node">
+                        <div class="project-tag">INFRASTRUCTURE // DISASTER RECOVERY</div>
+                        <h3>Backup & Disaster Recovery Validation</h3>
+                        <p class="project-summary-text">
+                            Designed and executed full-scale data restoration scenarios to evaluate business continuity protocols for core operational platforms.
+                        </p>
+                        <div class="project-tech-tokens">
+                            <span>Veeam Storage</span><span>Linux Cron Hardening</span><span>RTO/RPO Metrics</span><span>Encrypted Volumes</span>
+                        </div>
+                        <div class="project-achievements-block">
+                            <strong>Key Results:</strong> Reduced Recovery Time Objectives (RTO) from 8 hours down to 95 minutes by automating secondary backup storage replication tasks.
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="btn btn-card-action" onclick="alert('Project Detail Log: Resiliency testing complete. Redundant cluster volumes validated.')">View Details _</button>
+                        </div>
+                    </div>
+
+                    <!-- PROJECT 6 -->
+                    <!-- UPDATE THIS PROJECT -->
+                    <div class="project-card scroll-reveal-node">
+                        <div class="project-tag">IDENTITY // SECURITY CONTROLS</div>
+                        <h3>User Access Governance Assessment</h3>
+                        <p class="project-summary-text">
+                            Audited third-party supplier access points, privilege escalation records, and remote management connections across internal networks.
+                        </p>
+                        <div class="project-tech-tokens">
+                            <span>PAM Solutions</span><span>MFA Enforcement</span><span>Radius Server</span><span>Log Analysis</span>
+                        </div>
+                        <div class="project-achievements-block">
+                            <strong>Key Results:</strong> Enforced Multi-Factor Authentication across all external access pathways, closing potential entry vectors for unauthorized access.
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="btn btn-card-action" onclick="alert('Project Detail Log: Access governance verified. Zero unauthenticated privilege allocations detected.')">View Details _</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS & EDUCATION MIDDLEWARE TRACK -->
+        <section class="cert-edu-section">
+            <div class="section-container cert-edu-grid">
+                
+                <!-- CERTIFICATIONS SUB-BLOCK -->
+                <div class="cert-column">
+                    <h3 class="block-sub-title">🛡️ Valid Security Credentials</h3>
+                    <div class="credentials-stack">
+                        
+                        <div class="credential-item-card">
+                            <div class="cred-badge">PECB</div>
+                            <div class="cred-details">
+                                <h4>ISO/IEC 27001 Lead Implementer</h4>
+                                <p>Information Security Governance, Risk Management & Compliance Operations</p>
+                            </div>
+                        </div>
+
+                        <div class="credential-item-card">
+                            <div class="cred-badge">CWSE</div>
+                            <div class="cred-details">
+                                <h4>Hackviser Certified Web Security Expert</h4>
+                                <p>Web Application Exploitation, API Penetration Testing & Defense Mitigation</p>
+                            </div>
+                        </div>
+
+                        <div class="credential-item-card progress-cred">
+                            <div class="cred-badge progress">CCNA</div>
+                            <div class="cred-details">
+                                <h4>Cisco Certified Cybersecurity Associate</h4>
+                                <p>Network Infrastructure Controls, Diagnostic Analysis & Core Protocols [In Progress]</p>
+                            </div>
+                        </div>
+
+                        <div class="credential-item-card">
+                            <div class="cred-badge">MCITP</div>
+                            <div class="cred-details">
+                                <h4>Microsoft Certified IT Professional</h4>
+                                <p>Enterprise Systems Architecture, Active Directory Domain Services Management</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- EDUCATION SUB-BLOCK -->
+                <div class="edu-column">
+                    <h3 class="block-sub-title">🎓 Academic Foundations</h3>
+                    <div class="credentials-stack">
+                        
+                        <div class="edu-item-card">
+                            <div class="edu-year">2019 – 2024</div>
+                            <div class="edu-details">
+                                <h4>BSc Information Technology</h4>
+                                <h5>Ghana Communication Technology University</h5>
+                                <p>Specialized coursework in Network Systems, Enterprise System Administration, and Database Security Architecture.</p>
+                            </div>
+                        </div>
+
+                        <div class="edu-item-card">
+                            <div class="edu-year">2013 – 2015</div>
+                            <div class="edu-details">
+                                <h4>Professional Diploma in System Engineering</h4>
+                                <h5>IPMC College of Technology</h5>
+                                <p>IT Expert configuration track centered on routing fabrics, directory services management, and server environments.</p>
+                            </div>
+                        </div>
+
+                        <div class="edu-item-card">
+                            <div class="edu-year">2010 – 2013</div>
+                            <div class="edu-details">
+                                <h4>WASSCE Diploma Certificate</h4>
+                                <h5>Adidome Senior High School</h5>
+                                <p>General academic foundation baseline focusing on science tracking and analytic modules.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 0x04: WRITEUPS ( > writeups ) -->
+        <section id="writeups" class="writeups-section target-section">
+            <div class="section-container">
+                <div class="section-header-block">
+                    <h2 class="section-title"><span class="dir-symbol">></span> writeups</h2>
+                    <div class="section-subtitle-line">Technical knowledge base, incident walkthroughs, and audit field guides</div>
+                </div>
+
+                <div class="writeups-grid-layout">
+                    
+                    <!-- WRITEUP 1 -->
+                    <div class="writeup-card scroll-reveal-node">
+                        <div class="writeup-thumb-shell">
+                            <div class="matrix-hex-code-bg">0xAD 0x74 0x21</div>
+                            <span class="read-time-badge">12 min read</span>
+                        </div>
+                        <div class="writeup-body">
+                            <h3>Active Directory Security Hardening Guide</h3>
+                            <p>An administrative operational guide detailing step-by-step methods to restrict legacy NTLM fallback protocols, secure Group Policy preferences, and audit service principal names (SPNs) for unauthorized access risk indicators.</p>
+                            <a href="#writeups" onclick="alert('Technical Writeup Log: Active Directory Hardening Guide documentation stream loading... full access requires authenticated token.')" class="btn-text-link">Read Log Entry →</a>
+                        </div>
+                    </div>
+
+                    <!-- WRITEUP 2 -->
+                    <div class="writeup-card scroll-reveal-node">
+                        <div class="writeup-thumb-shell">
+                            <div class="matrix-hex-code-bg">0x49 0x54 0x47</div>
+                            <span class="read-time-badge">9 min read</span>
+                        </div>
+                        <div class="writeup-body">
+                            <h3>Lessons from IT General Controls Audits</h3>
+                            <p>A strategic breakdown of common operational compliance findings discovered during external evaluations, highlighting strategies to maintain strict change-control tracking across production code deployment lifecycles.</p>
+                            <a href="#writeups" onclick="alert('Technical Writeup Log: ITGC Field Guide online. Review checklist compiled from regional governance audits.')" class="btn-text-link">Read Log Entry →</a>
+                        </div>
+                    </div>
+
+                    <!-- WRITEUP 3 -->
+                    <div class="writeup-card scroll-reveal-node">
+                        <div class="writeup-thumb-shell">
+                            <div class="matrix-hex-code-bg">0x4F 0x57 0x41</div>
+                            <span class="read-time-badge">15 min read</span>
+                        </div>
+                        <div class="writeup-body">
+                            <h3>Common Web Application Security Weaknesses</h3>
+                            <p>Analyzing parameter tampering vulnerabilities and API protection gaps across transactional nodes, with code examples demonstrating secure application development practices.</p>
+                            <a href="#writeups" onclick="alert('Technical Writeup Log: Web Security telemetry data isolated. Code parameters mapped to OWASP reference matrices.')" class="btn-text-link">Read Log Entry →</a>
+                        </div>
+                    </div>
+
+                    <!-- WRITEUP 4 -->
+                    <div class="writeup-card scroll-reveal-node">
+                        <div class="writeup-thumb-shell">
+                            <div class="matrix-hex-code-bg">0x49 0x53 0x4D</div>
+                            <span class="read-time-badge">11 min read</span>
+                        </div>
+                        <div class="writeup-body">
+                            <h3>Building an ISO 27001-Compliant Security Program</h3>
+                            <p>An implementation guide for information security managers, focusing on how to establish a clear asset classification system and track dynamic infrastructure risk components.</p>
+                            <a href="#writeups" onclick="alert('Technical Writeup Log: ISMS blueprint compiled. Compliance verification metrics updated for target auditors.')" class="btn-text-link">Read Log Entry →</a>
+                        </div>
+                    </div>
+
+                    <!-- FUTURE WRITEUPS INJECTION TEMPLATE PLACEHOLDER -->
+                    <!-- To append subsequent writeups, duplicate the structure block below and update fields:
+                    <div class="writeup-card">
+                        <div class="writeup-thumb-shell">...</div>
+                        <div class="writeup-body">...</div>
+                    </div>
+                    -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 0x05: CONNECT ( > connect ) -->
+        <!-- UPDATE THIS SECTION -->
+        <section id="connect" class="connect-section target-section">
+            <div class="section-container">
+                <div class="section-header-block">
+                    <h2 class="section-title"><span class="dir-symbol">></span> connect</h2>
+                    <div class="section-subtitle-line">Secure communication endpoint - establish secure transport layer socket connection</div>
+                </div>
+
+                <div class="connect-grid-layout">
+                    
+                    <!-- CONNECTIVE METADATA -->
+                    <div class="contact-metadata-column">
+                        <div class="meta-terminal-box">
+                            <h4>Target Endpoint Telemetry</h4>
+                            <div class="meta-item">
+                                <span class="lbl">Operator Name:</span>
+                                <span class="val">Godswill Tawia-Mante</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="lbl">Primary Locator:</span>
+                                <span class="val">Accra, Ghana (GMT)</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="lbl">Secure Mail Box:</span>
+                                <span class="val"><a href="mailto:godswillmante1@gmail.com">godswillmante1@gmail.com</a></span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="lbl">Comms Terminal:</span>
+                                <span class="val"><a href="tel:+233209395710">+233 20 939 5710</a></span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="lbl">GitHub Node:</span>
+                                <span class="val"><a href="https://github.com/3xpl0r3r" target="_blank" rel="noopener noreferrer">github.com/3xpl0r3r</a></span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="lbl">LinkedIn Hub:</span>
+                                <span class="val"><a href="https://linkedin.com/in/godswillmante1" target="_blank" rel="noopener noreferrer">linkedin.com/in/godswillmante1</a></span>
+                            </div>
+                        </div>
+
+                        <div class="pgp-public-key-terminal">
+                            <div class="pgp-header">🔒 ACCESS METRIC ENCRYPTION KEY</div>
+                            <pre class="pgp-body">-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP v2.0.1
+mQENBFT3...G.TawiaMante-SecOps Key
+[ SHA-256 FINGERPRINT ENCRYPTED ]
+8F3C A9E1 4D22 01FB 75CE 9901 AA4B
+-----END PGP PUBLIC KEY BLOCK-----</pre>
+                        </div>
+                    </div>
+
+                    <!-- SECURE EMAILJS INTERACTION FORM -->
+                    <div class="contact-form-wrapper">
+                        <!-- To link EmailJS, configure the script.js parameters and ensure fields retain matching attributes -->
+                        <form id="cyber-contact-form" class="cyber-form-element">
+                            <div class="form-row-split">
+                                <div class="form-group-field">
+                                    <label for="form-name">Sender Entity Name *</label>
+                                    <input type="text" id="form-name" name="user_name" required placeholder="e.g. Chief Information Security Officer">
+                                </div>
+                                <div class="form-group-field">
+                                    <label for="form-email">Return Routing Vector (Email) *</label>
+                                    <input type="email" id="form-email" name="user_email" required placeholder="e.g. ciso@enterprise-domain.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group-field">
+                                <label for="form-subject">Transmission Subject Line *</label>
+                                <input type="text" id="form-subject" name="message_subject" required placeholder="e.g. Infrastructure Infrastructure Audit Proposal / Interview Request">
+                            </div>
+
+                            <div class="form-group-field">
+                                <label for="form-message">Secure Message Payload *</label>
+                                <textarea id="form-message" name="message_content" rows="6" required placeholder="Input comprehensive transmission logs here... Include project timelines or explicit organizational requirements."></textarea>
+                            </div>
+
+                            <div id="form-status-telemetry" class="form-status-telemetry">
+                                <!-- Status notifications injected dynamically via script.js -->
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit-form" id="submit-btn">
+                                <span class="btn-inner">Transmit Form Data _</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- TERMINAL METADATA FOOTER BLOCK -->
+    <footer class="terminal-footer">
+        <div class="footer-container">
+            <div class="footer-terminal-prompt">
+                <span class="footer-prompt-string">root@security-portfolio:~$</span>
+                <span class="footer-input-simulated">cat system_stats.json</span>
+                <span class="blinking-cursor-block"></span>
+            </div>
+            <div class="footer-matrix-links">
+                <a href="https://github.com/3xpl0r3r" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/godswillmante1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:godswillmante1@gmail.com">Secure Email</a>
+            </div>
+            <p class="footer-copyright">
+                &copy; 2026 Godswill Tawia-Mante. All systems operational. Certified Security Architecture Node.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
